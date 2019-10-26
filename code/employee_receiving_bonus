@@ -1,0 +1,8 @@
+--Joining employee and bonus by id as key
+bonus_emp = JOIN employee BY id, bonus BY id;
+--filtering all the empty bonus rows
+employ_bonus = FILTER bonus_emp BY bonus::bonus is not null;
+--limiting output to 10 records
+top_employ_bonus = LIMIT employ_bonus 10;
+--printing output
+dump top_employ_bonus;
